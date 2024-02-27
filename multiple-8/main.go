@@ -22,4 +22,14 @@ func main() {
 	}
 
 	fmt.Println(sum)
+
+	// Opinion 2, with Scan in for
+	var n2, sum2 int
+	for fmt.Scan(&n2); n2 > 0; n2-- {
+		var x int
+		if fmt.Scan(&x); x > 9 && x < 100 && x%8 == 0 {
+			sum2 += x
+		}
+	}
+	fmt.Println(sum2)
 }
